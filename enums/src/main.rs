@@ -58,4 +58,16 @@ fn main() {
     match_variant(Variant::Two);
     match_variant(Variant::Three);
     match_variant(Variant::Four);
+
+    let variant = Some(Variant::Three);
+    if let Some(Variant::Three) = variant {
+        println!("Three if let");
+    }
+
+    let variant = Some(Variant::Four);
+    if let Some(Variant::Four) = variant {
+        println!("Four if let");
+    } else {
+        println!("Not Four");
+    }
 }
